@@ -1,8 +1,8 @@
 {
-  "name": "lightence-admin",
+  "name": "react-booking-app",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "Free and easy-to-use admin template based on React 17+",
+  "description": "Datatellers Booking and patient management take Home task based on React 17+",
   "repository": {
     "type": "git",
     "url": "git+github.com:altence/lightence-admin.git"
