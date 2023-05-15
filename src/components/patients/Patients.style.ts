@@ -21,5 +21,4 @@ export const PatientTable = styled.div`
   @media only screen and ${media.md} {
     font-size: 1rem;
     margin-bottom: 2rem;
-  }
-`;
+  }`;

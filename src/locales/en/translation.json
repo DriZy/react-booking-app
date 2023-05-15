@@ -14,8 +14,8 @@
     },
     "form": {
       "infoSection": "General Information",
-      "appointmentSection": "General Information",
-      "addressSection": "General Information",
+      "appointmentSection": "Appointment Information",
+      "addressSection": "Address Information",
       "noteSection": "Notes",
       "fields": {
         "code": "Unique Code",
