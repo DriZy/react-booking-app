@@ -1,4 +1,43 @@
 {
+  "patients": {
+    "pageTitle": "Patients",
+    "table": {
+      "title": "Appointments",
+      "header": {
+        "name": "Name",
+        "code": "Code",
+        "age": "Age",
+        "address": "Address",
+        "phone": "Phone",
+        "status": "Status"
+      }
+    },
+    "form": {
+      "infoSection": "General Information",
+      "appointmentSection": "General Information",
+      "addressSection": "General Information",
+      "note": "Notes",
+      "fields": {
+        "code": "Unique Code",
+        "name": "Name",
+        "sex": "Sex",
+        "phone": "Phone",
+        "email": "Email",
+        "appointDate": "Appointment Date",
+        "firstName": "First Name",
+        "requestDate": "Request Date",
+        "appointmentStatus": "Appointment Status",
+        "appointmentTime": "Appointment Time",
+        "address": "Address 1",
+        "city": "City",
+        "beforeAppointment": "Before Appointment",
+        "afterAppointment": "After Appointment",
+        "save": "Save",
+        "edit": "Edit",
+        "update": "Update"
+      }
+    }
+  },
   "alerts": {
     "accept": "Accept",
     "basic": "Basic alert",

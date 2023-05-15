@@ -16,6 +16,7 @@ import RequireAuth from '@app/components/router/RequireAuth';
 import { withLoading } from '@app/hocs/withLoading.hoc';
 import NftDashboardPage from '@app/pages/DashboardPages/NftDashboardPage';
 import MedicalDashboardPage from '@app/pages/DashboardPages/MedicalDashboardPage';
+import { Patients } from '@app/components/patients/Patients';
 
 const NewsFeedPage = React.lazy(() => import('@app/pages/NewsFeedPage'));
 const DataTablesPage = React.lazy(() => import('@app/pages/DataTablesPage'));
@@ -26,6 +27,7 @@ const AdvancedFormsPage = React.lazy(() => import('@app/pages/AdvancedFormsPage'
 const PersonalInfoPage = React.lazy(() => import('@app/pages/PersonalInfoPage'));
 const SecuritySettingsPage = React.lazy(() => import('@app/pages/SecuritySettingsPage'));
 const NotificationsPage = React.lazy(() => import('@app/pages/NotificationsPage'));
+const PatientsPage = React.lazy(() => import('@app/pages/PatientsPage'));
 const PaymentsPage = React.lazy(() => import('@app/pages/PaymentsPage'));
 const ButtonsPage = React.lazy(() => import('@app/pages/uiComponentsPages/ButtonsPage'));
 const SpinnersPage = React.lazy(() => import('@app/pages/uiComponentsPages/SpinnersPage'));
@@ -147,6 +149,10 @@ export const AppRouter: React.FC = () => {
           </Route>
           <Route path="server-error" element={<ServerError />} />
           <Route path="404" element={<Error404 />} />
+          <Route path="patients" element={<PatientsPage />}>
+            <Route path="list" element={<Patients />} />
+            <Route path="add" element={<Patients />} />
+          </Route>
           <Route path="profile" element={<ProfileLayout />}>
             <Route path="personal-info" element={<PersonalInfo />} />
             <Route path="security-settings" element={<SecuritySettings />} />

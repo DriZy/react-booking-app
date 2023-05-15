@@ -2189,6 +2189,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-buddy/ide-toolbox@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "@react-buddy/ide-toolbox@npm:2.3.1"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0
+  checksum: 0d89f3266baf986f891d9745d6e1ce4e8f7abd9245b1338c133dfaad35b95ab215106ffce958eee994a704f801fcd2f4f8f2e848d771fe8a60f6cd602ed5d7b9
+  languageName: node
+  linkType: hard
+
+"@react-buddy/palette-antd@npm:^4.18.1":
+  version: 4.18.1
+  resolution: "@react-buddy/palette-antd@npm:4.18.1"
+  dependencies:
+    "@react-buddy/ide-toolbox": ^2.3.1
+  peerDependencies:
+    "@ant-design/icons": ^4.7.0
+    antd: ^4.18.3
+    react: ^17.0.0 || ^18.0.0
+  checksum: 6137bb0f3d161e7512af10e0de8c054bb0996d02423505ab94763ec188ea883cc2f8004cc728d6b948d63750bd583db6e68978c1b642208ee8dbe461e17e2d7a
+  languageName: node
+  linkType: hard
+
 "@react-google-maps/api@npm:^2.18.1":
   version: 2.18.1
   resolution: "@react-google-maps/api@npm:2.18.1"
@@ -11016,99 +11038,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lightence-admin@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "lightence-admin@workspace:."
-  dependencies:
-    "@ant-design/icons": ^4.6.2
-    "@craco/craco": ^6.1.2
-    "@lit-labs/react": ^1.0.2
-    "@react-google-maps/api": ^2.18.1
-    "@reduxjs/toolkit": ^1.7.1
-    "@types/country-list": ^2.1.0
-    "@types/leaflet": ^1.7.9
-    "@types/react": ^18.0.28
-    "@types/react-dom": ^18.0.11
-    "@types/react-helmet": ^6.1.5
-    "@types/react-responsive": ^8.0.5
-    "@types/react-router-dom": ^5.1.7
-    "@types/react-router-hash-link": ^2.4.4
-    "@types/react-simple-maps": ^1.0.7
-    "@types/react-slick": ^0.23.8
-    "@types/styled-components": ^5.1.10
-    "@types/uuid": ^8.3.4
-    "@typescript-eslint/eslint-plugin": ^5.10.0
-    "@typescript-eslint/parser": ^5.8.0
-    antd: ^4.22.4
-    antd-mask-input: ^2.0.7
-    axios: ^0.24.0
-    axios-mock-adapter: ^1.20.0
-    country-list: ^2.2.0
-    craco-alias: ^3.0.1
-    credit-card-type: ^9.1.0
-    dayjs: ^1.11.0
-    echarts: ^5.1.2
-    echarts-for-react: ^3.0.1
-    elt-react-credit-cards: ^0.0.1
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.3.0
-    husky: ^6.0.0
-    i18next: ^20.4.0
-    leaflet: ^1.7.1
-    less: ^4.1.2
-    less-plugin-clean-css: ^1.5.1
-    lint-staged: ^11.0.0
-    pigeon-maps: ^0.19.7
-    prettier: ^2.3.1
-    react: ^18.2.0
-    react-country-flag: ^3.0.2
-    react-dom: ^18.2.0
-    react-helmet-async: ^1.3.0
-    react-i18next: ^11.11.4
-    react-infinite-scroll-component: ^6.1.0
-    react-insta-stories: ^2.3.0
-    react-leaflet: next
-    react-phone-number-input: ^3.2.17
-    react-redux: ^7.2.6
-    react-responsive: ^9.0.2
-    react-router-dom: ^6.0.2
-    react-router-hash-link: ^2.4.3
-    react-scripts: 4.0.3
-    react-simple-maps: ^2.3.0
-    react-slick: ^0.28.1
-    react-verification-input: ^2.0.3
-    round-slider: "altence/round-slider#refactor/slider"
-    slick-carousel: ^1.8.1
-    styled-components: ^5.3.0
-    stylelint: ^13.13.1
-    stylelint-config-recommended: ^5.0.0
-    stylelint-config-styled-components: ^0.1.1
-    stylelint-processor-styled-components: ^1.10.0
-    typeface-lato: ^1.1.13
-    typeface-montserrat: ^1.1.13
-    typescript: ^4.1.2
-    uuid: ^8.3.2
-    web-vitals: ^1.0.1
-    webpack-bundle-analyzer: ^4.4.2
-    webpackbar: ^5.0.0-3
-    workbox-background-sync: ^5.1.3
-    workbox-broadcast-update: ^5.1.3
-    workbox-cacheable-response: ^5.1.3
-    workbox-core: ^5.1.3
-    workbox-expiration: ^5.1.3
-    workbox-google-analytics: ^5.1.3
-    workbox-navigation-preload: ^5.1.3
-    workbox-precaching: ^5.1.3
-    workbox-range-requests: ^5.1.3
-    workbox-routing: ^5.1.3
-    workbox-strategies: ^5.1.3
-    workbox-streams: ^5.1.3
-  languageName: unknown
-  linkType: soft
-
 "lines-and-columns@npm:^1.1.6":
   version: 1.2.4
   resolution: "lines-and-columns@npm:1.2.4"
@@ -14878,6 +14807,101 @@ __metadata:
   checksum: 99e52a6b2229c7ca730cfd44ac95640f955be71d144225bd6c24fa47922a742658a371d0a2f0876d732533f1055b7cd7e9d534c89c29f8ca889ecd1b8d15f065
   languageName: node
   linkType: hard
+
+"react-booking-app@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "react-booking-app@workspace:."
+  dependencies:
+    "@ant-design/icons": ^4.6.2
+    "@craco/craco": ^6.1.2
+    "@lit-labs/react": ^1.0.2
+    "@react-buddy/ide-toolbox": ^2.3.1
+    "@react-buddy/palette-antd": ^4.18.1
+    "@react-google-maps/api": ^2.18.1
+    "@reduxjs/toolkit": ^1.7.1
+    "@types/country-list": ^2.1.0
+    "@types/leaflet": ^1.7.9
+    "@types/react": ^18.0.28
+    "@types/react-dom": ^18.0.11
+    "@types/react-helmet": ^6.1.5
+    "@types/react-responsive": ^8.0.5
+    "@types/react-router-dom": ^5.1.7
+    "@types/react-router-hash-link": ^2.4.4
+    "@types/react-simple-maps": ^1.0.7
+    "@types/react-slick": ^0.23.8
+    "@types/styled-components": ^5.1.10
+    "@types/uuid": ^8.3.4
+    "@typescript-eslint/eslint-plugin": ^5.10.0
+    "@typescript-eslint/parser": ^5.8.0
+    antd: ^4.22.4
+    antd-mask-input: ^2.0.7
+    axios: ^0.24.0
+    axios-mock-adapter: ^1.20.0
+    country-list: ^2.2.0
+    craco-alias: ^3.0.1
+    credit-card-type: ^9.1.0
+    dayjs: ^1.11.0
+    echarts: ^5.1.2
+    echarts-for-react: ^3.0.1
+    elt-react-credit-cards: ^0.0.1
+    eslint: ^7.28.0
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-prettier: ^3.4.0
+    eslint-plugin-react: ^7.24.0
+    eslint-plugin-react-hooks: ^4.3.0
+    husky: ^6.0.0
+    i18next: ^20.4.0
+    leaflet: ^1.7.1
+    less: ^4.1.2
+    less-plugin-clean-css: ^1.5.1
+    lint-staged: ^11.0.0
+    pigeon-maps: ^0.19.7
+    prettier: ^2.3.1
+    react: ^18.2.0
+    react-country-flag: ^3.0.2
+    react-dom: ^18.2.0
+    react-helmet-async: ^1.3.0
+    react-i18next: ^11.11.4
+    react-infinite-scroll-component: ^6.1.0
+    react-insta-stories: ^2.3.0
+    react-leaflet: next
+    react-phone-number-input: ^3.2.17
+    react-redux: ^7.2.6
+    react-responsive: ^9.0.2
+    react-router-dom: ^6.0.2
+    react-router-hash-link: ^2.4.3
+    react-scripts: 4.0.3
+    react-simple-maps: ^2.3.0
+    react-slick: ^0.28.1
+    react-verification-input: ^2.0.3
+    round-slider: "altence/round-slider#refactor/slider"
+    slick-carousel: ^1.8.1
+    styled-components: ^5.3.0
+    stylelint: ^13.13.1
+    stylelint-config-recommended: ^5.0.0
+    stylelint-config-styled-components: ^0.1.1
+    stylelint-processor-styled-components: ^1.10.0
+    typeface-lato: ^1.1.13
+    typeface-montserrat: ^1.1.13
+    typescript: ^4.1.2
+    uuid: ^8.3.2
+    web-vitals: ^1.0.1
+    webpack-bundle-analyzer: ^4.4.2
+    webpackbar: ^5.0.0-3
+    workbox-background-sync: ^5.1.3
+    workbox-broadcast-update: ^5.1.3
+    workbox-cacheable-response: ^5.1.3
+    workbox-core: ^5.1.3
+    workbox-expiration: ^5.1.3
+    workbox-google-analytics: ^5.1.3
+    workbox-navigation-preload: ^5.1.3
+    workbox-precaching: ^5.1.3
+    workbox-range-requests: ^5.1.3
+    workbox-routing: ^5.1.3
+    workbox-strategies: ^5.1.3
+    workbox-streams: ^5.1.3
+  languageName: unknown
+  linkType: soft
 
 "react-country-flag@npm:^3.0.2":
   version: 3.0.2

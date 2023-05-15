@@ -1,16 +1,17 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Tables } from '@app/components/tables/Tables/Tables';
 import { PageTitle } from '@app/components/common/PageTitle/PageTitle';
+import { Patients } from '@app/components/patients/Patients';
 
-const DataTablesPage: React.FC = () => {
+const PatientsPage: React.FC = () => {
   const { t } = useTranslation();
+
   return (
     <>
-      <PageTitle>{t('common.dataTables')}</PageTitle>
-      <Tables />
+      <PageTitle>{t('patients.pageTitle')}</PageTitle>
+      <Patients />
     </>
   );
 };
 
-export default DataTablesPage;
+export default PatientsPage;
