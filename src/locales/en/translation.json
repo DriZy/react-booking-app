@@ -16,7 +16,7 @@
       "infoSection": "General Information",
       "appointmentSection": "General Information",
       "addressSection": "General Information",
-      "note": "Notes",
+      "noteSection": "Notes",
       "fields": {
         "code": "Unique Code",
         "name": "Name",
@@ -36,6 +36,12 @@
         "edit": "Edit",
         "update": "Update"
       }
+    },
+    "statues": {
+      "pending": "Pending",
+      "passed": "Passed",
+      "missed": "Missed",
+      "rescheduled": "Rescheduled"
     }
   },
   "alerts": {

@@ -12,7 +12,11 @@ import { BaseRow } from '@app/components/common/BaseRow/BaseRow';
 import { BaseCol } from '@app/components/common/BaseCol/BaseCol';
 import { BaseCheckbox } from '@app/components/common/BaseCheckbox/BaseCheckbox';
 import { BaseInput } from '@app/components/common/inputs/BaseInput/BaseInput';
-import {Col, Row } from 'antd';
+import { Col, DatePicker, Row } from 'antd';
+import { BaseForm } from '@app/components/common/forms/BaseForm/BaseForm';
+import * as S from '@app/components/forms/StepForm/StepForm.styles';
+import TextArea from 'antd/es/input/TextArea';
+import { DateTime } from '@app/components/common/BaseArticle/BaseArticle.styles';
 
 const formItemLayout = {
   labelCol: { span: 24 },
@@ -41,6 +45,15 @@ export const PatientForm: React.FC = () => {
     }, 1000);
   };
 
+  const timeSuffixSelector = (
+    <BaseForm.Item name="suffix" noStyle>
+      <S.Select>
+        <Option value="am">AM</Option>
+        <Option value="pm">PM</Option>
+      </S.Select>
+    </BaseForm.Item>
+  );
+
   return (
     <BaseButtonsForm
       {...formItemLayout}
@@ -61,14 +74,23 @@ export const PatientForm: React.FC = () => {
       }
       onFinish={onFinish}
     >
-      <Row gutter={[5, 5]}>
+      <Row className="general-info" gutter={[5, 5]}>
+        <BaseButtonsForm.Title>{t('patients.form.infoSection')}</BaseButtonsForm.Title>
         <Col className="col-1">
-          <BaseButtonsForm.Item name="code" label={t('patients.form.fields.code')}>
+          <BaseButtonsForm.Item
+            name="code"
+            label={t('patients.form.fields.code')}
+            rules={[{ required: true, message: t('common.requiredField') }]}
+          >
             <BaseInput />
           </BaseButtonsForm.Item>
         </Col>
         <Col className="col-3">
-          <BaseButtonsForm.Item name="name" label={t('patients.form.fields.name')}>
+          <BaseButtonsForm.Item
+            name="name"
+            label={t('patients.form.fields.name')}
+            rules={[{ required: true, message: t('common.requiredField') }]}
+          >
             <BaseInput />
           </BaseButtonsForm.Item>
         </Col>
@@ -77,82 +99,107 @@ export const PatientForm: React.FC = () => {
             name="sex"
             label={t('patients.form.fields.sex')}
             hasFeedback
-            rules={[{ required: true, message: t('forms.validationFormLabels.countryError') }]}
+            rules={[{ required: true, message: t('common.requiredField') }]}
           >
-            <BaseSelect placeholder={t('forms.validationFormLabels.selectCountry')}>
-              <Option value="china">{t('forms.validationFormLabels.china')}</Option>
-              <Option value="usa">{t('forms.validationFormLabels.usa')}</Option>
+            <BaseSelect placeholder={t('patients.form.fields.sex')}>
+              <Option value="male">{t('forms.stepFormLabels.male')}</Option>
+              <Option value="female">{t('forms.stepFormLabels.female')}</Option>
             </BaseSelect>
           </BaseButtonsForm.Item>
         </Col>
         <Col className="col-2">
-          <BaseButtonsForm.Item name="phone" label={t('patients.form.fields.phone')}>
+          <BaseButtonsForm.Item
+            name="phone"
+            label={t('patients.form.fields.phone')}
+            rules={[{ required: true, message: t('common.requiredField') }]}
+          >
             <BaseInput />
           </BaseButtonsForm.Item>
         </Col>
         <Col className="col-2">
-          <BaseButtonsForm.Item name="email" label={t('patients.form.fields.email')}>
+          <BaseButtonsForm.Item
+            name="email"
+            label={t('patients.form.fields.email')}
+            rules={[
+              {
+                required: true,
+                type: 'email',
+                message: t('common.notValidEmail'),
+              },
+            ]}
+          >
             <BaseInput />
           </BaseButtonsForm.Item>
         </Col>
       </Row>
+      <Row className="appointment-info" gutter={[5, 5]}>
+        <BaseButtonsForm.Title>{t('patients.form.appointmentSection')}</BaseButtonsForm.Title>
+        <BaseButtonsForm.Item
+          name="appointDate"
+          label={t('patients.form.fields.appointDate')}
+          rules={[
+            {
+              required: true,
+              message: t('common.requiredField'),
+            },
+          ]}
+        >
+          <DatePicker />
+        </BaseButtonsForm.Item>
+        <BaseButtonsForm.Item name="firstName" label={t('patients.form.fields.firstName')}>
+          <BaseInput />
+        </BaseButtonsForm.Item>
+        <BaseButtonsForm.Item
+          name="requestDate"
+          label={t('patients.form.fields.requestDate')}
+          rules={[
+            {
+              required: true,
+              message: t('common.requiredField'),
+            },
+          ]}
+        >
+          <DatePicker />
+        </BaseButtonsForm.Item>
+        <BaseButtonsForm.Item
+          name="appointmentStatus"
+          label={t('patients.form.fields.appointmentStatus')}
+          hasFeedback
+          rules={[{ required: true, message: t('forms.validationFormLabels.countryError') }]}
+        >
+          <BaseSelect placeholder={t('forms.validationFormLabels.selectCountry')}>
+            <Option value="china">{t('patients.statues.pending')}</Option>
+            <Option value="usa">{t('patients.statues.passed')}</Option>
+            <Option value="usa">{t('patients.statues.missed')}</Option>
+            <Option value="usa">{t('patients.statues.rescheduled')}</Option>
+          </BaseSelect>
+        </BaseButtonsForm.Item>
 
-      {/*<BaseButtonsForm.Item name="checkbox-group" label={t('forms.validationFormLabels.checkboxGroup')}>*/}
-      {/*  <BaseCheckbox.Group>*/}
-      {/*    <BaseRow>*/}
-      {/*      <BaseCol span={8}>*/}
-      {/*        <BaseCheckbox value="A">A</BaseCheckbox>*/}
-      {/*      </BaseCol>*/}
-      {/*      <BaseCol span={8}>*/}
-      {/*        <BaseCheckbox value="B" disabled>*/}
-      {/*          B*/}
-      {/*        </BaseCheckbox>*/}
-      {/*      </BaseCol>*/}
-      {/*      <BaseCol span={8}>*/}
-      {/*        <BaseCheckbox value="C">C</BaseCheckbox>*/}
-      {/*      </BaseCol>*/}
-      {/*      <BaseCol span={8}>*/}
-      {/*        <BaseCheckbox value="D">D</BaseCheckbox>*/}
-      {/*      </BaseCol>*/}
-      {/*      <BaseCol span={8}>*/}
-      {/*        <BaseCheckbox value="E">E</BaseCheckbox>*/}
-      {/*      </BaseCol>*/}
-      {/*      <BaseCol span={8}>*/}
-      {/*        <BaseCheckbox value="F">F</BaseCheckbox>*/}
-      {/*      </BaseCol>*/}
-      {/*    </BaseRow>*/}
-      {/*  </BaseCheckbox.Group>*/}
-      {/*</BaseButtonsForm.Item>*/}
-
-      {/*<BaseButtonsForm.Item name="rate" label={t('forms.validationFormLabels.rate')}>*/}
-      {/*  <BaseRate />*/}
-      {/*</BaseButtonsForm.Item>*/}
-
-      {/*<BaseButtonsForm.Item*/}
-      {/*  name="upload"*/}
-      {/*  label={t('forms.validationFormLabels.upload')}*/}
-      {/*  valuePropName="fileList"*/}
-      {/*  getValueFromEvent={normFile}*/}
-      {/*>*/}
-      {/*  <BaseUpload name="logo" action="/upload.do" listType="picture">*/}
-      {/*    <BaseButton type="default" icon={<UploadOutlined />}>*/}
-      {/*      {t('forms.validationFormLabels.clickToUpload')}*/}
-      {/*    </BaseButton>*/}
-      {/*  </BaseUpload>*/}
-      {/*</BaseButtonsForm.Item>*/}
-
-      {/*<BaseButtonsForm.Item label={t('forms.validationFormLabels.dragger')}>*/}
-      {/*  <BaseButtonsForm.Item name="dragger" valuePropName="fileList" getValueFromEvent={normFile} noStyle>*/}
-      {/*    <BaseUpload.Dragger name="files" action="/upload.do">*/}
-      {/*      <p>*/}
-      {/*        <InboxOutlined />*/}
-      {/*      </p>*/}
-      {/*      <p>{t('forms.validationFormLabels.clickToDrag')}</p>*/}
-      {/*      <p>{t('forms.validationFormLabels.supportSingle')}</p>*/}
-      {/*    </BaseUpload.Dragger>*/}
-      {/*  </BaseButtonsForm.Item>*/}
-      {/*</BaseButtonsForm.Item>*/}
-      {/*  */}
+        <BaseButtonsForm.Item name="phone" label={t('patients.form.fields.appointmentTime')}>
+          {/*<BaseInput addonAfter={timeSuffixSelector} />*/}
+          <DateTime />
+        </BaseButtonsForm.Item>
+      </Row>
+      <Row className="address-info" gutter={[5, 5]}>
+        <BaseButtonsForm.Title>{t('patients.form.addressSection')}</BaseButtonsForm.Title>
+        <BaseButtonsForm.Item name="address" label={t('patients.form.fields.address')}>
+          <BaseInput />
+        </BaseButtonsForm.Item>
+        <BaseButtonsForm.Item name="city" label={t('patients.form.fields.city')}>
+          <BaseInput />
+        </BaseButtonsForm.Item>
+      </Row>
+      <Row className="notes-info" gutter={[5, 5]}>
+          <BaseButtonsForm.Title  className="col-12">{t('patients.form.noteSection')}</BaseButtonsForm.Title>
+        <BaseRow className="col-12">
+          <BaseButtonsForm.Item name="beforeAppointment" label={t('patients.form.fields.beforeAppointment')}>
+            <TextArea />
+          </BaseButtonsForm.Item>
+          <BaseButtonsForm.Item name="afterAppointment" label={t('patients.form.fields.afterAppointment')}>
+            <TextArea />
+          </BaseButtonsForm.Item>
+        </BaseRow>
+      </Row>
     </BaseButtonsForm>
   );
 };
